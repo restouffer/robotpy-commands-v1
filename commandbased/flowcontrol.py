@@ -25,7 +25,7 @@ class CommandFlow(CommandGroup):
     def __init__(self, name):
         CommandGroup.__init__(self, name)
         import pydoc
-        print(pydoc.render_doc(CommandGroup, renderer=pydoc.plaintext))
+        print(pydoc.render_doc(Command, renderer=pydoc.plaintext))
 
         callingFlow = _getCommandFlow()
         self._source = getattr(callingFlow, "_source", self)
