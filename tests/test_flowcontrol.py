@@ -10,6 +10,7 @@ def run_command(cmd):
 
     scheduler = Scheduler.getInstance()
     for x in range(0, 2000):
+        print(x)
         scheduler.run()
         if not cmd.isRunning():
             return True
