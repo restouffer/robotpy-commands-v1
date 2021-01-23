@@ -51,6 +51,7 @@ class CommandFlow(CommandGroup):
 
     # These _hook methods ensure we always add our buffered conditions
     def addSequential(self, cmd, timeout=None):
+        print("added seqential command")
         self._popIfStack()
         if timeout is None:
             CommandGroup.addSequential(self, cmd)
