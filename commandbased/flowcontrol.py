@@ -18,7 +18,7 @@ class ConditionalFlow(ConditionalCommand):
         self.flowCondition = condition
 
     def _condition(self):
-        print("Testing condition")
+        print(f"Testing condition: {self.flowCondition()}")
         return self.flowCondition()
 
 
