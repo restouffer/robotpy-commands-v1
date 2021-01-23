@@ -18,14 +18,13 @@ class ConditionalFlow(ConditionalCommand):
         self.flowCondition = condition
 
     def _condition(self):
+        print("Testing condition")
         return self.flowCondition()
 
 
 class CommandFlow(CommandGroup):
     def __init__(self, name):
         CommandGroup.__init__(self, name)
-        import pydoc
-        print(pydoc.render_doc(Command, renderer=pydoc.plaintext))
 
         callingFlow = _getCommandFlow()
         self._source = getattr(callingFlow, "_source", self)

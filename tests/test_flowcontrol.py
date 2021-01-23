@@ -24,7 +24,6 @@ class CounterCommand(InstantCommand):
 
     def initialize(self):
         self.counter += 1
-        print(f'Set counter to {self.counter}')
 
 
 def test_if():
