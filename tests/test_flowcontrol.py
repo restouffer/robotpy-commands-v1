@@ -24,6 +24,7 @@ class CounterCommand(InstantCommand):
 
     def initialize(self):
         self.counter += 1
+        print(f'Incremented counter to {self.counter}')
 
 
 def test_if():
